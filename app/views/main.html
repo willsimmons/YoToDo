@@ -1,9 +1,11 @@
 <div class="container">
   <h2>To Do List</h2>
-  <p class="input-group" ng-repeat="todo in todos">
-    <input type="text" ng-model="todo" class="form-control">
-    <span class="input-group-btn"><button class="btn btn-danger" ng-click="removeToDo($index)" aria-label="Remove">X</button></span>
-  </p>
+    <div ui-sortable ng-model='todos'>
+    <p class="input-group" ng-repeat="todo in todos">
+      <input type="text" ng-model="todo" class="form-control">
+      <span class="input-group-btn"><button class="btn btn-danger" ng-click="removeToDo($index)" aria-label="Remove">X</button></span>
+    </p>
+  <div>
   <h2>Add a Task</h2>
   <form role="form" ng-submit="newToDo()">
     <div class="row">
